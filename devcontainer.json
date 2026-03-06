@@ -1,0 +1,23 @@
+{
+  "name": "TDD com C# e XUnit",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.vscodeintellicode-csharp",
+        "formulahendry.dotnet-test-explorer",
+        "ryanluker.vscode-coverage-gutters"
+      ],
+      "settings": {
+        "dotnet-test-explorer.testProjectPath": "**/*.Tests.csproj",
+        "dotnet-test-explorer.autoWatch": true,
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "postCreateCommand": "dotnet restore && dotnet build",
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
